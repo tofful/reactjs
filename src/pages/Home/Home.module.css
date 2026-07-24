@@ -17,11 +17,33 @@
     margin-top: 0;
   }
   
+  .headerActions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .headerActions button {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 0;
+  }
+
   .title {
     font-size: 24px;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
+  }
+
+  /* Mensajes de estado de la petición a la API */
+  .message {
+    color: #888;
+    font-size: 15px;
+  }
+
+  .error {
+    color: #ff6b6b;
+    font-size: 15px;
   }
   
   /* ============================================================
@@ -146,10 +168,98 @@
   }
   
   /* ============================================================
+                                  MODAL — VER (detalle de usuario)
+  ============================================================ */
+  .viewGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+    margin: 0;
+  }
+
+  .viewRow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .viewLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .viewValue {
+    font-size: 14px;
+    color: #eee;
+    margin: 0;
+  }
+
+  /* ============================================================
+                                  MODAL — EDITAR (formulario)
+  ============================================================ */
+  .editForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 16px;
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ccc;
+    margin-bottom: 6px;
+  }
+
+  .input,
+  .select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .input:focus,
+  .select:focus {
+    border-color: #666;
+  }
+
+  .modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .modalActions button {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 0;
+  }
+
+  /* ============================================================
                                   MOBILE
   ============================================================ */
   @media (max-width: 768px) {
     .container {
       padding: 20px 16px;
+    }
+
+    .viewGrid,
+    .formRow {
+      grid-template-columns: 1fr;
     }
 }

@@ -59,6 +59,13 @@
   border-color: #666;
 }
 
+/* Mensaje de error de la API */
+.error {
+  font-size: 14px;
+  color: #ff6b6b;
+  margin: 0 0 16px;
+}
+
 .footer {
   margin-top: 24px;
   font-size: 14px;
